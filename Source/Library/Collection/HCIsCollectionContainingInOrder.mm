@@ -95,7 +95,7 @@
 
 - (void)describeMismatchOfMatcher:(id<HCMatcher>)matcher item:(id)item
 {
-    [mismatchDescription appendText:[NSString stringWithFormat:@"item %d: ", nextMatchIndex]];
+    [mismatchDescription appendText:[NSString stringWithFormat:@"item %lu: ", (unsigned long)nextMatchIndex]];
     [matcher describeMismatchOf:item to:mismatchDescription];
 }
 
